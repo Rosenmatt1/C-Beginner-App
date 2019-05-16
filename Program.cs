@@ -8,7 +8,7 @@ namespace myApp
         static void Main(string[] args)
         {
             string name = "Mateo Rosenberg";
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello" + name );
             Console.WriteLine("The current time is " + DateTime.Now);
           
         }

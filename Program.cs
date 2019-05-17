@@ -23,7 +23,12 @@ namespace myApp
             Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
             //Reset text color
             Console.ResetColor();
-            Console.WriteLine("hello earth worm");
+            //Ask user name
+            Console.WriteLine("What is your name?");
+            //get user Input
+            string input = Console.ReadLine();
+            
+
 
             
           

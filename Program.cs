@@ -16,8 +16,14 @@ namespace myApp
             string appName = "Number Guesser";
             string appVersion = "1.0.0";
             string appAuthor = "Matthew Rosenberg";
+
+            //Change text to green
             Console.ForegroundColor = ConsoleColor.Green;
+            //text color
             Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
+            //Reset text color
+            Console.ResetColor();
+            Console.WriteLine("hello earth worm");
 
             
           

@@ -26,7 +26,22 @@ namespace myApp
             //Ask user name
             Console.WriteLine("What is your name?");
             //get user Input
-            string input = Console.ReadLine();
+            string inputName = Console.ReadLine();
+            Console.WriteLine("Your name is {0}", inputName);
+
+            int correctNumber = 7;
+            int guess = 0;
+            Console.WriteLine("Guess a number between 1 and 10");
+
+            //While guess is not correnct
+            while(guess != correctNumber) {
+              string input = Console.ReadLine();
+
+            //Cast to int and put in guess
+            guess = Int32.Parse(input);
+            }
+
+            }
             
 
 

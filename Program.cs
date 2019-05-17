@@ -10,7 +10,7 @@ namespace myApp
             string name = "Mateo Rosenberg";
             int age = 35;
 
-            Console.WriteLine("Hello" + name );
+            Console.WriteLine(name + " is " + age );
             Console.WriteLine("The current time is " + DateTime.Now);
           
         }

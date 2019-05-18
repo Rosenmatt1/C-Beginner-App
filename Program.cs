@@ -71,6 +71,16 @@ namespace myApp
           Console.ResetColor();
           Console.WriteLine("Want to play again? [Y or N]" );
           string answer = Console.ReadLine().ToUpper();
+
+          if (answer == "Y") {
+            continue;
+          }
+          else if (answer == "N") {
+            return;
+          }
+          else {
+            return;
+          }
         }
       }
 

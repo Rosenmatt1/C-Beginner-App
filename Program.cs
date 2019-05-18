@@ -8,10 +8,7 @@ namespace myApp
     static void Main(string[] args)
     {
       GetAppInfo();
-      Console.WriteLine("What is your name?");
-      //get user Input
-      string inputName = Console.ReadLine();
-      Console.WriteLine("Hello {0}, lets play a game...", inputName);
+      GreetUser();
 
       while (true)
       {
@@ -30,11 +27,7 @@ namespace myApp
           //if input is not a number
           if (!int.TryParse(input, out guess))
           {
-            //Change text color
-            Console.ForegroundColor = ConsoleColor.Red;
-            //Tell user its not a number
-            Console.WriteLine("Please enter a valid number");
-            Console.ResetColor();
+            PrintColorMessage(ConsoleColor.Red, "Please use an actual number");
             //Keep Going
             continue;
           }
@@ -87,6 +80,21 @@ namespace myApp
       //Reset text color
       Console.ResetColor();
       //Ask user name
+    }
+
+    static void GreetUser() {
+      Console.WriteLine("What is your name?");
+      //get user Input
+      string inputName = Console.ReadLine();
+      Console.WriteLine("Hello {0}, lets play a game...", inputName);
+    }
+
+    static void PrintColorMessage(ConsoleColor color, string message) {
+      //Change text color
+      Console.ForegroundColor = ConsoleColor.Red;
+      //Tell user its not a number
+      Console.WriteLine(message);
+      Console.ResetColor();
     }
 
   }

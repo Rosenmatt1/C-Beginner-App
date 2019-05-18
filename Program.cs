@@ -38,26 +38,37 @@ namespace myApp
       {
         string input = Console.ReadLine();
 
+        if (!int.TryParse(input, out guess)) {
+          //Change text color
+          Console.ForegroundColor = ConsoleColor.Red;
+          //Tell user its not a number
+          Console.WriteLine("Please enter a valid number");
+          Console.ResetColor();
+          //Keep Going
+          continue;
+        }
+
         //Cast to int and put in guess
         guess = Int32.Parse(input);
 
         //Match guess to correct Number
-        if (guess != correctNumber){
+        if (guess != correctNumber)
+        {
           // Change text color
           Console.ForegroundColor = ConsoleColor.Red;
-
           //Tell User Wrong Guess
           Console.WriteLine("Guess a number between 1 and 10");
-
           // Reset Text Color
           Console.ResetColor();
         }
-
-        if (guess == correctNumber) {
-          Console.ForegroundColor = ConsoleColor.Green;
-          Console.WriteLine("Congrats you are awesome!");
-        }
       }
+
+      if (guess == correctNumber)
+      {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Congrats you are awesome!");
+      }
+
 
     }
   }

@@ -38,20 +38,13 @@ namespace myApp
           //Match guess to correct Number
           if (guess != correctNumber)
           {
-            // Change text color
-            Console.ForegroundColor = ConsoleColor.Red;
-            //Tell User Wrong Guess
-            Console.WriteLine("Guess a number between 1 and 10");
-            // Reset Text Color
-            Console.ResetColor();
+            PrintColorMessage(ConsoleColor.Red, "Guess a number between 1 and 10");
           }
         }
 
         if (guess == correctNumber)
         {
-          Console.ForegroundColor = ConsoleColor.Green;
-          Console.WriteLine("Congrats you are awesome!");
-          Console.ResetColor();
+          PrintColorMessage(ConsoleColor.Green, "Congrats you are awesome!");
           Console.WriteLine("Want to play again? [Y or N]" );
           string answer = Console.ReadLine().ToUpper();
 
@@ -81,17 +74,15 @@ namespace myApp
       Console.ResetColor();
       //Ask user name
     }
-
     static void GreetUser() {
       Console.WriteLine("What is your name?");
       //get user Input
       string inputName = Console.ReadLine();
       Console.WriteLine("Hello {0}, lets play a game...", inputName);
     }
-
     static void PrintColorMessage(ConsoleColor color, string message) {
       //Change text color
-      Console.ForegroundColor = ConsoleColor.Red;
+      Console.ForegroundColor = color;
       //Tell user its not a number
       Console.WriteLine(message);
       Console.ResetColor();

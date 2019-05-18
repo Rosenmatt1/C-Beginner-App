@@ -7,17 +7,7 @@ namespace myApp
     //
     static void Main(string[] args)
     {
-      string appName = "Number Guesser";
-      string appVersion = "1.0.0";
-      string appAuthor = "Matthew Rosenberg";
-
-      //Change text to green
-      Console.ForegroundColor = ConsoleColor.Green;
-      //text color
-      Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
-      //Reset text color
-      Console.ResetColor();
-      //Ask user name
+      GetAppInfo();
       Console.WriteLine("What is your name?");
       //get user Input
       string inputName = Console.ReadLine();
@@ -85,5 +75,19 @@ namespace myApp
       }
 
     }
+    static void GetAppInfo() {
+      string appName = "Number Guesser";
+      string appVersion = "1.0.0";
+      string appAuthor = "Matthew Rosenberg";
+
+      //Change text to green
+      Console.ForegroundColor = ConsoleColor.Green;
+      //text color
+      Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
+      //Reset text color
+      Console.ResetColor();
+      //Ask user name
+    }
+
   }
 }
